@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="24.14">
+<testcase classname="Home page feature" name="Verify lowest and highest temperature" time="6.447">
+<system-out><![CDATA[Given I am on darksky home page.............................................passed
+When I click on today button to extend it...................................passed
+And I check lowest and highest temperature on the page......................passed
+Then I verify lowest and highest temperature on the page....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Loginpage feature" name="Verify error message" time="4.46">
+<system-out><![CDATA[Given I am on the darksky login page........................................passed
+When I enter abc@gmail.com into email text fields on login page.............passed
+And I enter password1 into password text fields on login page...............passed
+And I click on login button.................................................passed
+Then I verify error message “password and username does not match”..........passed
+]]></system-out>
+</testcase>
+<testcase classname="Homepage feature" name="Verify timeline and timezone" time="13.01">
+<failure message="For input string: &quot;&quot;" type="java.lang.NumberFormatException"><![CDATA[Given Verify timeline is displayed in correct format........................passed
+When I enter city into search text field on home screen.....................passed
+And I verify city’s time zone...............................................passed
+Then I verify timeline is displayed with two hours incremented..............failed
+
+StackTrace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at runnerTest.webPages.TimeLine.checkTimeLine(TimeLine.java:68)
+	at stepDefinition.TimeLineSD.verifyIncrement(TimeLineSD.java:34)
+	at ✽.I verify timeline is displayed with two hours incremented(file:///Users/omererdogmus/IdeaProjects/DarkSky_BDD_Cucumber/src/test/resources/features/TimeLine.feature:11)
+]]></failure>
+</testcase>
+</testsuite>

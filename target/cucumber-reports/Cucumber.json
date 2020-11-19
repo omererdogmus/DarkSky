@@ -1,0 +1,389 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 221000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on darksky home page",
+            "match": {
+              "location": "stepDefinition.HomePageSD.pageTitle()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-11T21:41:35.480Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5338000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.SharedSD.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Verify lowest and highest temperature",
+        "description": "",
+        "id": "home-page-feature;verify-lowest-and-highest-temperature",
+        "after": [
+          {
+            "result": {
+              "duration": 125000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.SharedSD.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 340000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click on today button to extend it",
+            "match": {
+              "location": "stepDefinition.HomePageSD.clickingOnToday()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 268000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I check lowest and highest temperature on the page",
+            "match": {
+              "location": "stepDefinition.HomePageSD.temperatures()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I verify lowest and highest temperature on the page",
+            "match": {
+              "location": "stepDefinition.HomePageSD.verifyTemp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@web"
+          },
+          {
+            "name": "@verifyHighAndLow"
+          }
+        ]
+      }
+    ],
+    "name": "Home page feature",
+    "description": "",
+    "id": "home-page-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/HomePage.feature",
+    "tags": [
+      {
+        "name": "@web",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 830000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the darksky login page",
+            "match": {
+              "location": "stepDefinition.LoginPageSD.getPageTitle()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-11T21:41:41.954Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2970000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.SharedSD.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Verify error message",
+        "description": "",
+        "id": "loginpage-feature;verify-error-message",
+        "after": [
+          {
+            "result": {
+              "duration": 115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.SharedSD.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 159000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I enter abc@gmail.com into email text fields on login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "abc@gmail.com",
+                  "offset": 8
+                },
+                {
+                  "val": "email",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinition.LoginPageSD.enterDataUserAndPasswordFiled(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter password1 into password text fields on login page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password1",
+                  "offset": 8
+                },
+                {
+                  "val": "password",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinition.LoginPageSD.enterDataUserAndPasswordFiled(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 238000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click on login button",
+            "match": {
+              "location": "stepDefinition.LoginPageSD.clickOnLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I verify error message “password and username does not match”",
+            "match": {
+              "location": "stepDefinition.LoginPageSD.getErrorText()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@web"
+          },
+          {
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "Loginpage feature",
+    "description": "",
+    "id": "loginpage-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/LoginPage.feature",
+    "tags": [
+      {
+        "name": "@web",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 772000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Verify timeline is displayed in correct format",
+            "match": {
+              "location": "stepDefinition.TimeLineSD.verifyTimeline()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-11T21:41:46.422Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2859000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.SharedSD.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Verify timeline and timezone",
+        "description": "",
+        "id": "homepage-feature;verify-timeline-and-timezone",
+        "after": [
+          {
+            "result": {
+              "duration": 1806000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.SharedSD.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4296000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I enter city into search text field on home screen",
+            "match": {
+              "location": "stepDefinition.TimeLineSD.verifyCityName()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3225000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify city’s time zone",
+            "match": {
+              "location": "stepDefinition.TimeLineSD.cityTimeZone()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NumberFormatException: For input string: \"\"\n\tat java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.lang.Integer.parseInt(Integer.java:592)\n\tat java.lang.Integer.parseInt(Integer.java:615)\n\tat runnerTest.webPages.TimeLine.checkTimeLine(TimeLine.java:68)\n\tat stepDefinition.TimeLineSD.verifyIncrement(TimeLineSD.java:34)\n\tat ✽.I verify timeline is displayed with two hours incremented(file:///Users/omererdogmus/IdeaProjects/DarkSky_BDD_Cucumber/src/test/resources/features/TimeLine.feature:11)\n",
+              "duration": 37000000,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "I verify timeline is displayed with two hours incremented",
+            "match": {
+              "location": "stepDefinition.TimeLineSD.verifyIncrement()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@web"
+          },
+          {
+            "name": "@timezone"
+          }
+        ]
+      }
+    ],
+    "name": "Homepage feature",
+    "description": "",
+    "id": "homepage-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TimeLine.feature",
+    "tags": [
+      {
+        "name": "@web",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
